@@ -11,33 +11,27 @@ function DomElement   (selector, height,  width, bg, fontSize ) {
 }
 
 DomElement.prototype.strElements = function (){
-  
-  if (asking.this.selector[0] === '.') {
+  if (this.selector[0] === '.') {
   let divItem =  document.createElement('div');
   document.body.append(divItem);
   // divItem.classList.add(selector.slice(1));
-  divItem.style.cssText `selector: ${this.selector};
-  height: ${this.height};
+  divItem.style.cssText ` height: ${this.height};
   width: ${this.width};
   background: ${this.bg};
   font-size: ${this.fontSize}; `;
 
-  console.log('blocks');
-} else if (asking.this.selector[0] === '#') {
+} else if (this.selector[0] === '#') {
   let pItem = document.createElement('p');
-  
   document.body.append(pItem);
-  pItem.style.cssText `selector: ${this.selector};
-  height: ${this.height};
+  pItem.style.cssText ` height: ${this.height};
   width: ${this.width};  
   background: ${this.bg};
   font-size: ${this.fontSize}; `;
 }
 };
 
-let str1 = new DomElement('.simple' , '50px' , '60px', 'black', 'Sans-serif');
-let str2 = new DomElement('#simple' , '50px' , '60px', 'black', 'Sans-serif');
-
+let str1 = new DomElement(asking , '50px' , '60px', 'black', '40px');
+let str2 = new DomElement(asking , '50px' , '60px', 'black', '40px');
 
 console.log(str1);
 console.log(str2);
